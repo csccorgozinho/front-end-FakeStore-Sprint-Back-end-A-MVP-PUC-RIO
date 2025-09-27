@@ -11,8 +11,6 @@ Este repositório contém o frontend do projeto FakeStore, responsável pela int
 
 projeto-mvp/
 
-backend/# Database
-
 FakeStore-Frontend/# React app + Dockerfile + nginx.conf + .dockerignore
 
 FakeStore-Backend/ # FastAPI + requirements.txt + Dockerfile
@@ -21,28 +19,22 @@ docker-compose.yml # Orquestração
 
 ⚙️ Instalação e Execução para teste local
 
-Clone o repositório:
+  1.Clone o repositório:
 
-git clone https://github.com/csccorgozinho/front-end-FakeStore-Sprint-Back-end-A-MVP-PUC-RIO.git
+    git clone https://github.com/csccorgozinho/front-end-FakeStore-Sprint-Back-end-A-MVP-PUC-RIO.git
+    cd fakestore-frontend
 
-cd fakestore-frontend
+  2. Instale as dependências:
 
+    npm install
+    ou
+    yarn install
 
-Instale as dependências:
+  3.Execute o ambiente de desenvolvimento:
 
-npm install
-
-ou
-
-yarn install
-
-Execute o ambiente de desenvolvimento:
-
-npm start
-
-ou
-
-yarn start
+    npm start
+    ou
+    yarn start
 
 
 Acesse em:
