@@ -21,7 +21,8 @@ docker-compose.yml # Orquestração
 
 Clone o repositório:
 
-git clone https://github.com/SEU-USUARIO/fakestore-frontend.git
+git clone https://github.com/csccorgozinho/front-end-FakeStore-Sprint-Back-end-Avan-ado-MVP-PUC-RIO
+
 cd fakestore-frontend
 
 
@@ -54,7 +55,9 @@ Windows/macOS: Baixe de docker.com/products/docker-desktop. Ative WSL 2 no Windo
 Linux (Ubuntu/Debian): Rode no terminal:
 
 sudo apt update
+
 sudo apt install docker.io docker-compose
+
 sudo usermod -aG docker $USER # Adicione seu usuário ao grupo docker (reinicie sessão)
 
 Verifique instalação: docker --version e docker-compose --version (deve mostrar v2+).
