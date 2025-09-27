@@ -1,0 +1,29 @@
+
+
+services:
+  backend:
+    build: ./FakeStore-Backend  # Constrói do Dockerfile na pasta backend
+    ports:
+      - "8000:8000"  # Mapeia porta 8000 do container para 8000 do host
+    volumes:
+      - ./FakeStore-backend/fakestore.db:/app/fakestore.db  # Persiste o banco SQLite no host
+    environment:
+      - PYTHONUNBUFFERED=1  # Para logs em tempo real
+    networks:
+      - fakestore-network
+
+  frontend:
+    build: ./FakeStore-Frontend  # Constrói do Dockerfile na pasta frontend
+    ports:
+      - "3000:80"  # Mapeia porta 80 do container para 80 do host (ou use 3000:80 se 80 for restrita)
+    depends_on:
+      - backend  # Garante que o back-end inicie primeiro
+    networks:
+      - fakestore-network
+
+networks:
+  fakestore-network:
+    driver: bridge  # Rede interna para comunicação entre containers
+
+volumes:
+  db-data:  # Volume para persistir dados (opcional, mas bom para dev)
