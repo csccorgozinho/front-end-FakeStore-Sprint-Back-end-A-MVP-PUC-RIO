@@ -32,14 +32,14 @@ docker-compose.yml # Orquestração
 
   3.Execute o ambiente de desenvolvimento:
 
-    npm start
+    npm dev
     ou
-    yarn start
+    yarn dev
 
 
-Acesse em:
+  4.Acesse em:
 
-http://localhost:3000
+    http://localhost:5174
 
 ⚙️Instalação e Execução com Docker
 
