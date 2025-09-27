@@ -39,7 +39,7 @@ docker-compose.yml # Orquestração
 
   4.Acesse em:
 
-    http://localhost:5174
+    http://localhost:5173
 
 ⚙️Instalação e Execução com Docker
 
