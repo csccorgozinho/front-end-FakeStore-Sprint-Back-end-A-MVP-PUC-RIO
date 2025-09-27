@@ -10,8 +10,11 @@ Tecnologias: Docker Compose para orquestração, volumes para persistir o banco 
 Este repositório contém o frontend do projeto FakeStore, responsável pela interface de usuário e comunicação com a API externa/backend.
 
 projeto-mvp/
+
 FakeStore-Frontend/# React app + Dockerfile + nginx.conf + .dockerignore
+
 FakeStore-Backend/ # FastAPI + requirements.txt + Dockerfile
+
 docker-compose.yml # Orquestração
 
 ⚙️ Instalação e Execução para teste local
