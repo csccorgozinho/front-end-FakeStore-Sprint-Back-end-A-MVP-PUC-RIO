@@ -11,6 +11,8 @@ Este repositório contém o frontend do projeto FakeStore, responsável pela int
 
 projeto-mvp/
 
+backend/# Database
+
 FakeStore-Frontend/# React app + Dockerfile + nginx.conf + .dockerignore
 
 FakeStore-Backend/ # FastAPI + requirements.txt + Dockerfile
@@ -47,7 +49,7 @@ Acesse em:
 
 http://localhost:3000
 
-Instalação e Execução com Docker
+⚙️Instalação e Execução com Docker
 
 Pré-requisitos
 Docker Desktop: Instale a versão mais recente para sua plataforma:
