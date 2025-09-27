@@ -1,65 +1,74 @@
-# front-end-FakeStore-Sprint-Back-end-Avan-adEste repositório contém o código-fonte do frontend da Fake Store, uma aplicação web construída com React.
+📌 Projeto Frontend – FakeStore
 
-Pré-requisitos
-Para rodar esta aplicação, você precisará ter o seguinte instalado em sua máquina:
+Este projeto é um MVP fullstack containerizado:
 
-Node.js (versão 14 ou superior)
-npm ou Yarn (gerenciador de pacotes)
-Docker e Docker Compose (se for rodar via Docker)
-Como Rodar Nativamente
-Siga os passos abaixo para configurar e rodar o frontend em seu ambiente local:
+Front-end: Aplicação React (build com Vite, servida por Nginx).
+Back-end: API FastAPI (Python) com persistência em SQLite.
+Integração: 4 métodos HTTP (POST/GET/PUT/DELETE) para gerenciamento de pedidos, + produtos da Fake Store API externa.
+Tecnologias: Docker Compose para orquestração, volumes para persistir o banco de dados.
 
-Clone o Repositório:
+Este repositório contém o frontend do projeto FakeStore, responsável pela interface de usuário e comunicação com a API externa/backend.
 
-bash
+projeto-mvp/
+├── FakeStore-Frontend/# React app + Dockerfile + nginx.conf + .dockerignore
+├── FakeStore-Backend/ # FastAPI + requirements.txt + Dockerfile
+├── docker-compose.yml # Orquestração
 
-git clone <URL_DO_SEU_REPOSITORIO_FRONTEND>
-cd FakeStore-api-main
-Instale as Dependências:
+⚙️ Instalação e Execução para teste local
 
-bash
+Clone o repositório:
 
+git clone https://github.com/SEU-USUARIO/fakestore-frontend.git
+cd fakestore-frontend
+
+
+Instale as dependências:
 
 npm install
-# ou
+
+ou
+
 yarn install
-Inicie a Aplicação:
 
-bash
+Execute o ambiente de desenvolvimento:
 
-npm run dev
-# ou
-yarn dev
-A aplicação será iniciada em http://localhost:3000 . Abra seu navegador e acesse este endereço para ver o frontend em funcionamento.
+npm start
 
-Como Rodar via Docker
-Para rodar o frontend usando Docker, siga estas instruções:
+ou
 
-Clone o Repositório:
+yarn start
 
-bash
 
-git clone <URL_DO_SEU_REPOSITORIO_FRONTEND>
-cd FakeStore-api-main
-Construa a Imagem Docker:
+Acesse em:
 
-bash
+http://localhost:3000
 
-docker build -t fakestore-frontend .
-Execute o Contêiner Docker:
+Instalação e Execução com Docker
 
-bash
+Pré-requisitos
+Docker Desktop: Instale a versão mais recente para sua plataforma:
+Windows/macOS: Baixe de docker.com/products/docker-desktop. Ative WSL 2 no Windows (durante instalação).
+Linux (Ubuntu/Debian): Rode no terminal:
 
-Run
-Copy code
-docker run -p 3000:80 fakestore-frontend
-A aplicação estará acessível em http://localhost:3000 em seu navegador.
+sudo apt update
+sudo apt install docker.io docker-compose
+sudo usermod -aG docker $USER # Adicione seu usuário ao grupo docker (reinicie sessão)
 
-Estrutura do Projeto
-public/: Arquivos estáticos.
-src/: Código-fonte da aplicação React.
-index.html: Arquivo HTML principal.
-package.json: Lista de dependências e scripts do projeto.
-dockerfile: Configuração para construir a imagem Docker.
-nginx.conf: Configuração do Nginx para servir a aplicação.
-o-MVP
+Verifique instalação: docker --version e docker-compose --version (deve mostrar v2+).
+
+Recursos Recomendados: 4GB+ RAM, 2+ CPU cores (Docker Settings > Resources para ajustar).
+
+Rede: Conexão à internet para baixar imagens Docker (Node, Python, Nginx — ~1GB na primeira vez).
+Navegador: Chrome/Firefox para testar (F12 para debug).
+Construa e Inicie os Containers:
+
+Rode o comando principal:
+
+docker-compose up --build
+
+Para rodar em background:
+docker-compose up -d --build
+
+Portas Mapeadas (Ajustáveis no docker-compose.yml):
+Front-end: http://localhost:3000 (React app).
+Back-end: http://localhost:8000 (API FastAPI).
