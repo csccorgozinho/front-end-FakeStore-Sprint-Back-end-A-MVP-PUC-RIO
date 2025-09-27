@@ -23,7 +23,7 @@ docker-compose.yml # Orquestração
 
 Clone o repositório:
 
-git clone https://github.com/csccorgozinho/front-end-FakeStore-Sprint-Back-end-Avan-ado-MVP-PUC-RIO
+git clone https://github.com/csccorgozinho/front-end-FakeStore-Sprint-Back-end-A-MVP-PUC-RIO.git
 
 cd fakestore-frontend
 
