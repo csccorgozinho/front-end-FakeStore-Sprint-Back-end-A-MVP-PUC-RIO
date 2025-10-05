@@ -5,9 +5,7 @@ import { HeartedContext } from '../../contexts/HeartedContext';
 import { Link } from 'react-router-dom';
 
 function CartCheckout({productsAdded}) {
-    //**Use the global CartContext to get the props from it**/
   const {removeProduct} = useContext(HeartedContext);
-  //**use the removeProduct function as a onclick for it work on the icon **/
   return (
     
       <div className='product-items'>
