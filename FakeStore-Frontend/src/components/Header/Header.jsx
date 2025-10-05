@@ -6,14 +6,13 @@ import { Link } from 'react-router-dom';
 import { FaSun } from "react-icons/fa";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { ThemeContext } from '../../contexts/DarkModeContext';
-//BsMoonStarsFill
+
 
 function Header() {
-  //**Use the global CartContext to get the props from it**/
+
   const {hearted} = useContext(HeartedContext)
 
-  //** toggle dark mode */
-  //** use context for global state */
+
   const {darkMode, setDarkMode} = useContext(ThemeContext);
 
 
