@@ -3,9 +3,7 @@ import "./Contact.css"
 import { ThemeContext } from '../../contexts/DarkModeContext'
 
 function ContactUs() {
-  //* a box with 3 inputs for user to send  data to server
-    //** toggle dark mode */
-  //** use context for global state */
+
   const {darkMode} = useContext(ThemeContext);
   return (
     <div className={
@@ -21,9 +19,9 @@ function ContactUs() {
           'form-container dark-form-container'
         }>
             <h1>Contact Us</h1>
-            <input type="text" placeholder='First Name'/>
-            <input type="text" placeholder='Last Name'/>
-            <input type="text" placeholder='Write your message here'/>
+            <input type="text" placeholder='Caio'/>
+            <input type="text" placeholder='Corgozinho'/>
+            <input type="text" placeholder='lol'/>
             <button>Submit</button>
         </div>
     </div>
